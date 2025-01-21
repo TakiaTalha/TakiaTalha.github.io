@@ -1,0 +1,355 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  }
+  
+  code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  }
+  
+  html, body #root  {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column; 
+  }
+  
+  .whole{
+    display: flex;
+    flex-direction: column; 
+    min-height: 100%; 
+    box-sizing: border-box; 
+  }
+  
+  /* Header styling */
+  .header {
+  flex: 0 0 auto; 
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 3px solid black;
+  width: 100%; 
+  max-width: 100vw;
+  }
+  
+  /* Home container styling */
+  
+  /* Footer styling */
+  
+  .content {
+    width: 100%; 
+    max-width: 100vw;
+    flex: 1;
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center the content horizontally */
+    /* gap: 2rem;  */
+    flex-wrap: wrap;
+  }
+  
+  /* Profile Section: Takes 1/3 of the width */
+  .profile-sec {
+    flex: 1; /* 1 part out of 3 */
+    justify-content: center;
+    max-width: 33%; /* Restrict to 1/3rd of the parent container */
+    background-color:rgb(232, 228, 228); /* Example background color */
+    border-radius: 8px; /* Optional: Rounded corners */
+    gap: 10px
+  }
+  
+  /* Main Content Section: Takes 2/3 of the width */
+  .page-sec {
+    flex: 2; /* 2 parts out of 3 */
+    max-width: 66%; /* Restrict to 2/3rds of the parent container */
+    background-color: #fff; /* Example background color */
+    border-radius: 8px; /* Optional: Rounded corners */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); Optional: Subtle shadow */
+  }
+  
+  
+  .footer {
+    flex: 0 0 auto; /* Footer takes up only its required space */
+    background-color: #778088;
+    color: white;
+    text-align: center;
+    border-top: 3px solid black;
+    width: 100%; 
+    max-width: 100vw;
+  }
+  
+  
+  
+  /* dark mode */
+  
+  //body
+  html.dark-mode body {
+    background-color: Black;
+    color: #ffffff;
+  }
+  
+  
+  html.dark-mode .content{
+    background-color: black;
+  }
+  
+  
+  /* dark mode app.js */
+  html.dark-mode .header {
+    background-color: black;
+    color: #ffffff;
+  }
+  html.dark-mode .page-sec{
+    background-color: Black;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+  }
+  html.dark-mode .profile-sec{
+    background-color : Black;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+  }
+  html.dark-mode .footer{
+    background-color : black;
+    border-top: 1px solid white;
+  }
+  
+  
+  /* header + footer */
+  html.dark-mode .header-c{
+    background-color: black;
+    border-bottom: 3px solid white;
+  }
+  
+  html.dark-mode .footer-c{
+    background-color: black;
+  }
+  
+  /*sidebar*/
+  html.dark-mode .profile-sec{
+    background-color: rgb(22, 20, 20);
+  }
+  html.dark-mode  .profile-container h2 {
+    color: white;}
+  
+  html.dark-mode .profile-container p {
+    color: white;
+    }
+  
+  /* need to fix the images and links */
+  
+  /* home */
+  html.dark-mode .home-container{
+    background-color: black;
+    --color: rgba(255, 255, 255, 0.3);
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+  }
+  
+  html.dark-mode .about-section h1 {
+    color: white;
+  }
+  html.dark-mode .about-section p {
+    color: white;
+  }
+  
+  /*experience*/
+  html.dark-mode .experience-container{
+    background-color: black;
+  }
+  
+  html.dark-mode .section-title{
+    color: rgb(81, 127, 212)
+  }
+  
+  html.dark-mode .date {
+    color: white;
+  }
+  html.dark-mode .experience-header h3{
+    color: white;
+  }
+  html.dark-mode .experience-container li {
+    color: white;
+  }
+  
+  /* projects */
+  html.dark-mode .projects-container{
+    background-color: black;
+  }
+  html.dark-mode .projects-container h1{
+    color: white;
+  }
+  
+  /* card */
+  html.dark-mode .card-container{
+    background-color: black;
+    border-style: solid;
+    border-width: 4px;
+    border-color: white;
+  }
+  html.dark-mode .card-right{
+    background-color: black;
+    border-left: white 2px solid;
+  
+  }
+  
+  html.dark-mode .card-right p{
+    color: white;
+    }
+  html.dark-mode .list-item-text{
+    color:rgb(146, 179, 214);
+  }
+  
+    @media (max-width: 500px) {
+      .profile-sec {
+        max-width :100%;
+  
+      }
+      html.dark-mode .profile-sec{
+        border-top: black 2px solid;
+        border-right: black 2px solid;
+        border-left: black 2px solid;
+        border-bottom: white 2px solid;
+      }
+    
+      .profile-sec a {
+        flex: 1 1 100%; /* Make links take full width on small screens */
+        
+      }
+    }
+    .bubble {
+      position: absolute;
+      background-color: rgba(84, 122, 146, 0.3); /* Light blue color */
+      border-radius: 50%; /* Makes the div circular */
+      opacity: 0.8; /* Slight transparency */
+      animation: float 10s infinite; /* Float animation */
+    }
+    
+    /* Bubble Sizes */
+    .bubble.small {
+      width: 20px;
+      height: 20px;
+    }
+    
+    .bubble.medium {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .bubble.large {
+      width: 60px;
+      height: 60px;
+    }
+    
+    /* Float Animation */
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) translateX(0); /* Start at bottom */
+        opacity: 0.6;
+      }
+      50% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-100%) translateX(30px); /* Move up */
+        opacity: 0;
+      }
+    }
+  
+    .wrapper {
+      width: 200px;
+      height: 60px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .circle {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      border-radius: 50%;
+      background-color: black;
+      left: 15%;
+      transform-origin: 50%;
+      animation: circle7124 .5s alternate infinite ease;
+    }
+    
+    @keyframes circle7124 {
+      0% {
+        top: 60px;
+        height: 5px;
+        border-radius: 50px 50px 25px 25px;
+        transform: scaleX(1.7);
+      }
+    
+      40% {
+        height: 20px;
+        border-radius: 50%;
+        transform: scaleX(1);
+      }
+    
+      100% {
+        top: 0%;
+      }
+    }
+    
+    .circle:nth-child(2) {
+      left: 45%;
+      animation-delay: .2s;
+    }
+    
+    .circle:nth-child(3) {
+      left: auto;
+      right: 15%;
+      animation-delay: .3s;
+    }
+    
+    .shadow {
+      width: 20px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: rgba(0,0,0,0.9);
+      position: absolute;
+      top: 62px;
+      transform-origin: 50%;
+      z-index: -1;
+      left: 15%;
+      filter: blur(1px);
+      animation: shadow046 .5s alternate infinite ease;
+    }
+    
+    @keyframes shadow046 {
+      0% {
+        transform: scaleX(1.5);
+      }
+    
+      40% {
+        transform: scaleX(1);
+        opacity: .7;
+      }
+    
+      100% {
+        transform: scaleX(.2);
+        opacity: .4;
+      }
+    }
+    
+    .shadow:nth-child(4) {
+      left: 45%;
+      animation-delay: .2s
+    }
+    
+    .shadow:nth-child(5) {
+      left: auto;
+      right: 15%;
+      animation-delay: .3s;
+    }
+  
+    html.dark-mode .fas fa-pencil-alt{
+      background:white;
+    }

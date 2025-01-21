@@ -1,0 +1,108 @@
+/* Import Google Font Effects */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&effect=outline');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+
+/* Home Container */
+.home-container {
+  display: flex;
+  gap: 2rem; 
+  font-family: 'Courier New', Courier, monospace;
+  flex-wrap: wrap;
+  position: relative;
+  overflow :Hidden;
+  height: 100%;
+  --color: #E1E1E1;
+  background-color: #F3F3F3;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+  background-size: 55px 55px;
+}
+
+/* About Section */
+.about-section {
+    flex: 2; /* Make this section take more space */
+    line-height: 1.6;
+    /* overflow: scroll; */
+    text-align: center;
+    width : 50%;
+    position: relative;
+  }
+  
+  .about-section h1 {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 1 rem;
+    margin-bottom: 1rem;
+    color: #d9d3d3; /* Base text color */
+    /* text-align: center; */
+    text-shadow: 
+      0 0 5px #f0a500, 
+      0 0 10px #f0a500, 
+      0 0 20px #f0a500, 
+      0 0 40px #ff8000, 
+      0 0 80px #ff8000, 
+      0 0 90px #ff8000; /* Multi-layered glow */
+    animation: neonGlow 1.5s infinite alternate;
+    width: 75%;
+    margin-left: 5%
+    
+  }
+  
+  /* Keyframe Animation for Glowing Effect */
+  @keyframes neonGlow {
+    0% {
+      text-shadow: 
+        0 0 5px #706f6d, 
+        0 0 10px #070706, 
+        0 0 20px #504b40, 
+        0 0 40px #000000, 
+        0 0 80px #8a6e52, 
+        0 0 90px #ff8000;
+    }
+    100% {
+      text-shadow: 
+        0 0 10px #312b25, 
+        0 0 20px #5d5955, 
+        0 0 30px #504e4b, 
+        0 0 50px #5e4d47, 
+        0 0 100px #7c7572, 
+        0 0 110px #c8bab4;
+    }
+  }
+  
+  .about-section p {
+    font-weight: 800;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #333;
+    width : 75%;
+    text-align: center;
+    margin-left: 10%;
+    font-family: 'Fredericka the Great', cursive;
+  }
+
+  .fas {
+    font-size: 2rem;
+    color: black;
+    margin-left: 0.5rem;
+  }
+  
+  .erasing-animation {
+    animation: erasing 1.8s infinite;
+  }
+  
+  .writing-animation {
+    animation: writing 2s infinite;
+  }
+  
+  @keyframes erasing {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  @keyframes writing {
+    0% { transform: translate(0px, 0px); }
+    50% { transform: translate(10px, -10px); }
+    100% { transform: translate(0px, 0px); }
+  }

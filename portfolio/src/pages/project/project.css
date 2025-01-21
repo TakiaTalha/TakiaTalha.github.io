@@ -1,0 +1,29 @@
+.projects-container {
+    text-align: center;
+    padding: 2rem;
+    background-color:rgb(255, 255, 255); /* Adjust as needed */
+    color: #ffffff;
+  }   
+  .projects-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: black;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 0 2rem;
+    overflow: scroll;
+  }
+
+  @media (max-width: 500px) {
+    .projects-container h1{
+      font-size: 0.875rem; /* Reduce font size */
+    }
+    .projects-container{
+      width: 100%;
+      padding : 0px;
+    }
+  }

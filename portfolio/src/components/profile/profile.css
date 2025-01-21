@@ -1,0 +1,193 @@
+/* Profile Section */
+.profile-container {
+    flex: 1; /* Allow this section to take up equal space */
+    text-align: center; /* Center-align content */
+    max-width: 100%; /* Prevent content from exceeding container width */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    padding: 1rem; /* Add padding inside the container */
+    overflow-wrap: break-word; /* Ensure long words break within the container */
+    overflow : scroll;
+  }
+  
+  .profile-container h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0 0 0.5rem 0; /* Add spacing below the title */
+    text-align: center; /* Center-align the title */
+    word-wrap: break-word; /* Ensure long text breaks properly */
+    overflow-wrap: break-word; /* Additional safeguard for long text */
+  }
+  .profile-container p {
+    max-width: 100%; /* Ensure it doesn't overflow the container */
+    word-wrap: break-word; /* Allow breaking long words to fit within the container */
+    overflow-wrap: break-word; /* Ensure proper text wrapping in all browsers */
+  }
+  
+  .contact-info {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    text-align: left; /* Align the contact details to the left */
+    max-width: 100%; /* Ensure content doesn’t overflow the container */
+  }
+  
+  .contact-info li {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    display: flex; /* Align image and text horizontally */
+    align-items: center; /* Vertically center align text and image */
+    gap: 0.5rem; /* Add space between image and text */
+  }
+  
+  .contact-info a {
+    color: #a4c6c5;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    color:rgb(5, 37, 42);
+    text-decoration: underline;
+  }
+  
+  /* Typewriter Effect for the Student Line */
+  .typewriter {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 100%; 
+    display: inline-block;
+  }
+
+  .container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Push behind all content */
+  }
+.bubble {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 25px rgba (255, 255, 255, 0.25);
+  animation: animate_4010 8s ease-in-out infinite;
+}
+
+.bubble:nth-child(2) {
+  position: relative;
+  zoom: 0.45;
+  left: -10px;
+  top: -100px;
+  animation-delay: -4s;
+}
+
+.bubble:nth-child(3) {
+  position: relative;
+  zoom: 0.45;
+  right: -80px;
+  top: -300px;
+  animation-delay: -6s;
+}
+
+.bubble:nth-child(4) {
+  position: relative;
+  zoom: 0.35;
+  left: -120px;
+  bottom: -200px;
+  animation-delay: -3s;
+}
+
+.bubble:nth-child(5) {
+  position: relative;
+  zoom: 0.5;
+  left: 0px;
+  top: 200px;
+  animation-delay: -5s;
+}
+
+@keyframes animate_4010 {
+  0%,100% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+.bubble::before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 45px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 10;
+  filter: blur(2px);
+}
+
+.bubble::after {
+  content: '';
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 10;
+  filter: blur(2px);
+}
+
+.bubble span {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.bubble span:nth-child(1) {
+  inset: 10px;
+  border-left: 15px solid #0fb4ff;
+  filter: blur(8px);
+}
+
+.bubble span:nth-child(2) {
+  inset: 10px;
+  border-right: 15px solid #ff4484;
+  filter: blur(8px);
+}
+
+.bubble span:nth-child(3) {
+  inset: 10px;
+  border-top: 15px solid #ffeb3b;
+  filter: blur(8px);
+}
+
+.bubble span:nth-child(4) {
+  inset: 30px;
+  border-left: 15px solid #ff4484;
+  filter: blur(12px);
+}
+
+.bubble span:nth-child(5) {
+  inset: 10px;
+  border-bottom: 10px solid #fff;
+  filter: blur(8px);
+  transform: rotate(330deg);
+}
+
+@media (max-width: 500px) {
+  .profile-container{
+    height : 150px;
+  }
+  .profile-container h2 {
+    font-size: 10px;
+  }
+  .typewriter{
+    font-size: 8px;
+  }
+}
+
+  
+
+  

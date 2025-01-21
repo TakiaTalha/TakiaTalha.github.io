@@ -1,0 +1,76 @@
+/* Container for the entire experience section */
+.experience-container {
+    padding: 2rem; /* Add padding around the section */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners for the section */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  }
+  
+  /* Section title */
+  .section-title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #003366; /* Example blue color */
+    text-transform: uppercase; /* Capitalize the title */
+    border-bottom: 2px solid #003366; /* Add underline */
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Individual experience item */
+  .experience-item {
+    margin-bottom: 2px; /* Space between items */
+    overflow: scroll;
+  }
+  
+  /* Header for each experience (role and dates) */
+  .experience-header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: space-between; /* Align role on the left and date on the right */
+    align-items: center; /* Center align vertically */
+    margin-bottom: 0.5rem;
+    gap: 5px;
+  }
+  
+  .experience-header h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333; /* Dark text color */
+  }
+  
+  .date {
+    font-size: 0.9rem;
+    color: #575454; /* Lighter text for dates */
+    font-style: italic;
+  }
+  
+  /* List of responsibilities/tasks */
+  ul {
+    margin: 0;
+    padding-left: 1.5rem; /* Indent the list */
+  }
+  
+ .experience-container li {
+    font-family:fantasy;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem; /* Space between list items */
+    line-height: 1.5; /* Improve readability */
+    color: #0c0b0b; /* Slightly lighter text color */
+  }
+  
+  @media (max-width: 500px) {
+    .experience-container h2{
+      font-size: 0.875rem; 
+    }
+    .experience-header h3{
+      font-size: 0.8rem; 
+    }
+    .experience-header p{
+      font-size: 0.875rem; 
+    }
+    .experience-container li {
+       font-size: 0.7rem; 
+    }
+  }
