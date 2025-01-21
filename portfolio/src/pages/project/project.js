@@ -7,7 +7,7 @@ const Projects = () => {
       image: './tutor.gif',
       title: 'Personal AI Tutor',
       description: 'Currently working on developing a smart tutor that will be able to guide a student and surface the next best possible course of action/module/material that the student should know to learn ML/AI concepts',
-      link: 'https://github.com/chloe-nguyenminh/csc413_project',
+      link: 'https://github.com/CSC392-CSC492-Building-AI-ML-systems/personalAITutor',
     },
   ];
 

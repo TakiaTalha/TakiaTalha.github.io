@@ -7,6 +7,17 @@ function Experience() {
       <h2 className="section-title">EXPERIENCE</h2>
       <div className="experience-item">
         <div className="experience-header">
+          <h3>ML Developer, The Linux Foundation</h3>
+          <p className="date">Jan 2024 - Present</p>
+        </div>
+        <ul>
+          <li> Developing a Personal AI Tutor that guides a student and surface the next best possible course of action/module/material that the student should know to learn ML/AI concepts</li>
+          <li>Currently working on developing on a Graph RAG model that will collaborate with a DAG structured database to provide content to the chatbot.</li>
+          <li>Devising a chatbot by finetuning a pre-existing LLM and creating the surface for the chatbot using React/Next.js</li>
+        </ul>
+      </div>
+      <div className="experience-item">
+        <div className="experience-header">
           <h3>Teaching Assistant, University of Toronto</h3>
           <p className="date">Sep 2024 - Present</p>
         </div>
@@ -16,7 +27,6 @@ function Experience() {
           <li>Assisting the professor in developing course materials, quizzes, and tutorial exercises, improving student engagement</li>
         </ul>
       </div>
-
       <div className="experience-item">
         <div className="experience-header">
           <h3>ML Developer, U of T Machine Intelligence Student Team</h3>
