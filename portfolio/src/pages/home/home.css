@@ -98,3 +98,15 @@
     50% { transform: translate(10px, -10px); }
     100% { transform: translate(0px, 0px); }
 }
+
+@media (max-width: 500px) {
+    .about-section h1 {
+        font-size : 20px;
+        }
+    .about-section p{
+       font-size: 10px
+    }
+    .about-section{
+        width: 100%;
+    }
+    }

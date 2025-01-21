@@ -27,7 +27,7 @@ function Home() {
 
         this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
-        let typeSpeed = 100;
+        let typeSpeed = 10;
         if (this.isDeleting) typeSpeed /= 4;
 
         if (this.pencilElement) {
@@ -56,7 +56,7 @@ function Home() {
     const aboutSpan = document.querySelector("#about-span");
     const pencil = aboutSpan.nextElementSibling; // Select the pencil icon
     const words = [
-      "Hi! I'm Takia, a third-year computer science student at the University of Toronto. I am currently working as a teaching assistant at UofT. I am interested in Machine Learning and Deep Learning, especially in NLP tasks. I have worked on a couple of ML projects and am continuously improving my skills. Currently, I am working under a professor to develop an AI tutor. "
+      "Hi! I'm Takia, a third-year computer science student at the University of Toronto with a strong passion for Machine Learning and Deep Learning, particularly in Natural Language Processing (NLP) tasks. I am currently working as a teaching assistant at UofT. Over time, I have completed several ML projects and am continuously striving to expand my knowledge and expertise in the field. Currently, I am collaborating with The Linux Foundation to develop a personal AI tutor. Additionally, I am also working with The Hospital for Sick Children to enhance their website with new features to improve usability and data accessibility. I am eager to explore new challenges and opportunities to further my growth in AI and software development"
     ];
 
     new TypeWriter(aboutSpan, words, 2500, pencil);
@@ -68,7 +68,7 @@ function Home() {
         <h1 className="font-effect-outline">About</h1>
         <p>
           <span className="txt-type" id="about-span"></span>
-          <i className="fas fa-pencil-alt"></i>
+          <i className="fas fa-pencil-alt" aria-hidden="true"></i>
         </p>
       </div>
     </div>

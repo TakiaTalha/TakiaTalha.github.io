@@ -38,6 +38,13 @@ function Profile() {
           link="https://www.linkedin.com/in/kazi-takia-talha-27ab03253"
         />
       </ul>
+      <div className="resume-container">
+        <a href="/Resume .pdf" download="Kazi_Takia_Talha_Resume.pdf">
+          <div className="resume-button">
+            Download Resume
+          </div>
+        </a>
+      </div>
       <div class="container">
     <div class="bubble">
         <span></span>

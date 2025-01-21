@@ -61,9 +61,11 @@
   height: 100%;
   overflow: hidden;
   z-index: -1;
+  margin-top: 10px;
 }
 
 .bubble {
+  overflow: hidden;
   position: absolute;
   width: 200px;
   height: 200px;
@@ -80,13 +82,6 @@
   animation-delay: -4s;
 }
 
-.bubble:nth-child(3) {
-  position: relative;
-  zoom: 0.45;
-  right: -80px;
-  top: -300px;
-  animation-delay: -6s;
-}
 
 .bubble:nth-child(4) {
   position: relative;
@@ -151,14 +146,8 @@
 }
 
 .bubble span:nth-child(2) {
-  inset: 10px;
+  inset: 15px;
   border-right: 15px solid #ff4484;
-  filter: blur(8px);
-}
-
-.bubble span:nth-child(3) {
-  inset: 10px;
-  border-top: 15px solid #ffeb3b;
   filter: blur(8px);
 }
 
@@ -175,14 +164,82 @@
   transform: rotate(330deg);
 }
 
+/* Resume Button Styling */
+.resume-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.resume-button {
+  background-color:rgb(89, 100, 111);
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solidrgb(142, 172, 192);
+  width: fit-content;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.resume-button:hover {
+  background-color:rgb(138, 141, 142);
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.resume-button:active {
+  transform: translateY(0px);
+  box-shadow: none;
+}
+
+/* Profile page enhancements */
+.profile-container {
+  text-align: center;
+}
+
+.profile-details {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-details li {
+  margin: 10px 0;
+  font-size: 16px;
+}
+.resume-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
 @media (max-width: 500px) {
   .profile-container {
-      height: 150px;
+      height: 250px;
+      overflow: hidden;
   }
   .profile-container h2 {
       font-size: 10px;
   }
   .typewriter {
       font-size: 8px;
+  }
+  .resume-container{
+    margin-top: 10px;
+  }
+  .resume-button {
+    padding: 8px 12px;  /* Smaller padding */
+    font-size: 12px;    /* Smaller text */
+    border-radius: 5px; /* Adjust border radius */
+    width: auto;        /* Let it shrink naturally */
+  }
+}
+
+@media (max-width: 374px) {
+  .bubble{
+    opacity: 20%;
   }
 }

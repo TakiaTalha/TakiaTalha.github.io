@@ -48,7 +48,7 @@ body {
   .profile-sec {
     flex: 1;
     justify-content: center;
-    max-width: 33%;
+    max-width: 100%;
     background-color:rgb(232, 228, 228);
     border-radius: 8px;
     gap: 10px
@@ -56,7 +56,7 @@ body {
   
   .page-sec {
     flex: 2;
-    max-width: 66%;
+    max-width: 100%;
     background-color: #fff;
     border-radius: 8px;
   }
@@ -318,4 +318,3 @@ body {
   html.dark-mode .fas fa-pencil-alt{
     background:white;
   }
-  
