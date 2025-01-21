@@ -1,7 +1,7 @@
 .projects-container {
     text-align: center;
     padding: 2rem;
-    background-color:rgb(255, 255, 255); /* Adjust as needed */
+    background-color:rgb(255, 255, 255); 
     color: #ffffff;
   }   
   .projects-container h1 {
@@ -20,7 +20,7 @@
 
   @media (max-width: 500px) {
     .projects-container h1{
-      font-size: 0.875rem; /* Reduce font size */
+      font-size: 0.875rem; 
     }
     .projects-container{
       width: 100%;

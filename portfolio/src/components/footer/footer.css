@@ -17,9 +17,6 @@
     margin-bottom: 1rem; /* Space below the text */
   }
 
-
-  // dark mode
-
   .dark-mode .footer-c{
     background-color: black; /* Darker background in dark mode */
   }

@@ -6,10 +6,10 @@
   }
   
   .list-item-image {
-    width: 24px; /* Set the width of the image */
-    height: 24px; /* Set the height of the image */
+    width: 24px; 
+    height: 24px; 
     margin-right: 0.5rem;
-    object-fit: cover; /* Ensures the image scales nicely */
+    object-fit: cover; 
   }
   
   .list-item-text {
@@ -38,7 +38,7 @@
 
   @media (max-width: 500px) {
     .list-item-image {
-      width: 10px; /* Set the width of the image */
+      width: 10px;
       height: 10px;
   }
   .list-item-text {
