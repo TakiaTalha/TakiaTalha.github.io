@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
 .experience-container {
   padding: 2rem;
   background-color: #f9f9f9;
@@ -48,7 +50,8 @@ ul {
 }
 
 .experience-container li {
-  font-family: fantasy;
+  font-family: "Abel", serif;
+  font-weight: 60;
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
   line-height: 1.5;
