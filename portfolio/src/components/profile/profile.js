@@ -39,7 +39,7 @@ function Profile() {
         />
       </ul>
       <div className="resume-container">
-        <a href="/Kazi_Takia_Talha_Resume.pdf" download="Kazi_Takia_Talha_Resume.pdf">
+        <a href="/Takia_Talha_Resume.pdf" download="Kazi_Takia_Talha_Resume.pdf">
           <div className="resume-button">
             Download Resume
           </div>

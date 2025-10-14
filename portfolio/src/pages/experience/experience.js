@@ -7,13 +7,35 @@ function Experience() {
       <h2 className="section-title">EXPERIENCE</h2>
       <div className="experience-item">
         <div className="experience-header">
-          <h3>ML Developer, The Linux Foundation</h3>
-          <p className="date">Jan 2024 - Present</p>
+          <h3>Software Analyst Intern, Hitachi Rail</h3>
+          <p className="date">May 2024 - Present</p>
         </div>
         <ul>
-          <li> Developing a Personal AI Tutor that guides a student and surface the next best possible course of action/module/material that the student should know to learn ML/AI concepts</li>
-          <li>Currently working on developing on a Graph RAG model that will collaborate with a DAG structured database to provide content to the chatbot.</li>
-          <li>Devising a chatbot by finetuning a pre-existing LLM and creating the surface for the chatbot using React/Next.js</li>
+        <li>Contributing to the optimization of the Automatic Train Supervision (ATS) system to improve railway travel time and operational efficiency</li>
+        <li>Performed data cleaning, analysis, and feature engineering on large-scale operational datasets extracted from XML files and internal databases</li>
+        <li>Developed a baseline machine learning model to analyze and predict travel time</li>
+        <li>Currently implementing a graph-based representation of train network data using <strong>Structural Deep Network Embedding (SDNE)</strong> for enhanced system modeling</li>
+        </ul>
+      </div>
+      <div className="experience-item">
+        <div className="experience-header">
+          <h3>Software Developer Intern, The Hospital for Sick Children</h3>
+          <p className="date">Jan 2025 - Apr 2024</p>
+        </div>
+        <ul>
+          <li>Worked in a team to build a website using Next.js and FastAPI for their researchers to analysis data features, track and monitor participant data</li>
+          <li>Developed an algorithm to process daily sensor data from participants and automatically determine hours of wear</li>
+        </ul>
+      </div>
+      <div className="experience-item">
+        <div className="experience-header">
+          <h3>ML Developer, The Linux Foundation</h3>
+          <p className="date">Jan 2024 - Apr 2024</p>
+        </div>
+        <ul>
+          <li>Developed a Personal AI Tutor that guides a student and surface the next best possible course of action/module/material that the student should know to learn ML/AI concepts</li>
+          <li>Worked on developing on a Graph RAG model that will collaborate with a DAG structured database to provide content to the chatbot.</li>
+          <li>Devised a chatbot by finetuning a pre-existing LLM and creating the surface for the chatbot using React/Next.js</li>
         </ul>
       </div>
       <div className="experience-item">
