@@ -1,112 +1,96 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&effect=outline");
-@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
-
 .home-container {
   display: flex;
-  gap: 2rem; 
-  font-family: 'Courier New', Courier, monospace;
+  gap: 2rem;
+  font-family: var(--font-body);
   flex-wrap: wrap;
   position: relative;
   overflow: hidden;
-  height: 100%;
-  --color: #E1E1E1;
-  background-color: #F3F3F3;
-  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
-      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
-  background-size: 55px 55px;
+  padding: 2.75rem 2.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  --grid-color: rgba(23, 23, 38, 0.04);
+  background-image:
+    radial-gradient(circle at 100% 0%, var(--accent-soft) 0%, transparent 35%),
+    linear-gradient(0deg, transparent 24%, var(--grid-color) 25%, var(--grid-color) 26%, transparent 27%, transparent 74%, var(--grid-color) 75%, var(--grid-color) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, var(--grid-color) 25%, var(--grid-color) 26%, transparent 27%, transparent 74%, var(--grid-color) 75%, var(--grid-color) 76%, transparent 77%, transparent);
+  background-size: auto, 55px 55px, 55px 55px;
 }
 
 .about-section {
-    flex: 2;
-    line-height: 1.6;
-    text-align: center;
-    width: 50%;
+    flex: 1;
+    line-height: 1.7;
+    text-align: left;
+    width: 100%;
     position: relative;
-}
-  
-.about-section h1 {
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 40px;
-    margin-bottom: 1rem;
-    color: #d9d3d3;
-    text-shadow: 
-      0 0 5px #f0a500, 
-      0 0 10px #f0a500, 
-      0 0 20px #f0a500, 
-      0 0 40px #ff8000, 
-      0 0 80px #ff8000, 
-      0 0 90px #ff8000;
-    animation: neonGlow 1.5s infinite alternate;
-    width: 75%;
-    margin-left: 5%;
+    z-index: 1;
 }
 
-@keyframes neonGlow {
-    0% {
-      text-shadow: 
-        0 0 5px #706f6d, 
-        0 0 10px #070706, 
-        0 0 20px #504b40, 
-        0 0 40px #000000, 
-        0 0 80px #8a6e52, 
-        0 0 90px #ff8000;
-    }
-    100% {
-      text-shadow: 
-        0 0 10px #312b25, 
-        0 0 20px #5d5955, 
-        0 0 30px #504e4b, 
-        0 0 50px #5e4d47, 
-        0 0 100px #7c7572, 
-        0 0 110px #c8bab4;
-    }
-}
-  
-.about-section p {
+.about-section h1 {
+    position: relative;
+    font-family: var(--font-head);
+    font-size: 2.4rem;
     font-weight: 800;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    color: #333;
-    width: 75%;
-    text-align: center;
-    margin-left: 10%;
-    font-family: 'Fredericka the Great', cursive;
+    letter-spacing: -0.02em;
+    margin: 0 0 1.25rem 0;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    animation: none;
+    width: auto;
+}
+
+.about-section p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1.02rem;
+    line-height: 1.75;
+    margin: 0;
+    color: var(--text-muted);
+    width: 100%;
+    text-align: left;
 }
 
 .fas {
-    font-size: 2rem;
-    color: black;
-    margin-left: 0.5rem;
+    font-size: 1.4rem;
+    color: var(--accent);
+    margin-left: 0.4rem;
 }
-  
+
 .erasing-animation {
     animation: erasing 1.8s infinite;
 }
-  
+
 .writing-animation {
     animation: writing 2s infinite;
 }
-  
+
 @keyframes erasing {
     0% { transform: rotate(0deg); }
     50% { transform: rotate(180deg); }
     100% { transform: rotate(0deg); }
 }
-  
+
 @keyframes writing {
     0% { transform: translate(0px, 0px); }
-    50% { transform: translate(10px, -10px); }
+    50% { transform: translate(6px, -6px); }
     100% { transform: translate(0px, 0px); }
 }
 
 @media (max-width: 500px) {
-    .about-section h1 {
-        font-size : 20px;
-        }
-    .about-section p{
-       font-size: 10px
+    .home-container {
+        padding: 1.75rem 1.35rem;
     }
-    .about-section{
+    .about-section h1 {
+        font-size: 1.7rem;
+    }
+    .about-section p {
+        font-size: 0.92rem;
+    }
+    .about-section {
         width: 100%;
     }
-    }
+}

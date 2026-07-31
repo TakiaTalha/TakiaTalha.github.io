@@ -1,17 +1,136 @@
 .profile-container {
-  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 2.25rem 1.6rem 1.75rem;
   text-align: center;
-  max-width: 100%;
-  box-sizing: border-box;
-  padding: 1rem;
-  overflow-wrap: break-word;
-  overflow: scroll;
+  isolation: isolate;
+}
+
+/* Gradient accent bar at the top of the card */
+.profile-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--gradient);
+  z-index: 3;
+}
+
+/* Soft radial glow behind the header */
+.profile-container::after {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  width: 240px;
+  height: 240px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ===== Avatar ===== */
+.profile-avatar {
+  position: relative;
+  z-index: 2;
+  width: 118px;
+  height: 118px;
+  margin: 0 auto 1.1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient);
+  padding: 4px;
+  box-shadow: var(--shadow-md);
+  animation: avatar-ring 6s ease-in-out infinite;
+}
+
+.profile-avatar::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: var(--gradient);
+  opacity: 0.28;
+  filter: blur(14px);
+  z-index: -1;
+}
+
+.profile-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--surface);
+  position: relative;
+  z-index: 2;
+}
+
+.profile-avatar-initials {
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 2.4rem;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: var(--surface-alt);
+  z-index: 1;
+}
+
+.profile-avatar.no-photo .profile-avatar-initials {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+}
+
+.profile-avatar-status {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #22c55e;
+  border: 3px solid var(--surface);
+  z-index: 3;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+  animation: status-pulse 2.2s ease-out infinite;
+}
+
+@keyframes avatar-ring {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(4deg); }
+}
+
+@keyframes status-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55); }
+  70% { box-shadow: 0 0 0 9px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
 }
 
 .profile-container h2 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  margin: 0 0 0.5rem 0;
-  text-align: center;
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.55rem;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.6rem 0;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -20,6 +139,44 @@
   max-width: 100%;
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+.typewriter {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.typewriter p {
+  margin: 0;
+  padding: 0.4rem 0.95rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+/* ===== Contact links ===== */
+.profile-details {
+  position: relative;
+  z-index: 2;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.profile-details li {
+  margin: 0;
+  font-size: 0.95rem;
 }
 
 .contact-info {
@@ -39,29 +196,66 @@
 }
 
 .contact-info a {
-  color: #a4c6c5;
+  color: var(--accent);
   text-decoration: none;
 }
 
 .contact-info a:hover {
-  color: rgb(5, 37, 42);
+  color: var(--accent-2);
   text-decoration: underline;
 }
 
-.typewriter {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  max-width: 100%; 
-  display: inline-block;
+/* ===== Resume button ===== */
+.resume-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.6rem;
 }
 
-.container {
-  top: 0;
-  left: 0;
+.resume-container a {
+  text-decoration: none;
+  color: inherit;
   width: 100%;
-  height: 100%;
+}
+
+.resume-button {
+  background: var(--gradient);
+  color: #fff;
+  padding: 0.9rem 1.5rem;
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: 14px;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  width: 100%;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.resume-button:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  filter: brightness(1.05);
+}
+
+.resume-button:active {
+  transform: translateY(0px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ===== Ambient bubble backdrop (subtle, contained) ===== */
+.container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   overflow: hidden;
-  z-index: -1;
-  margin-top: 10px;
+  pointer-events: none;
+  opacity: 0.35;
 }
 
 .bubble {
@@ -82,7 +276,6 @@
   animation-delay: -4s;
 }
 
-
 .bubble:nth-child(4) {
   position: relative;
   zoom: 0.35;
@@ -101,10 +294,10 @@
 
 @keyframes animate_4010 {
   0%, 100% {
-      transform: translateY(-20px);
+    transform: translateY(-20px);
   }
   50% {
-      transform: translateY(20px);
+    transform: translateY(20px);
   }
 }
 
@@ -141,19 +334,19 @@
 
 .bubble span:nth-child(1) {
   inset: 10px;
-  border-left: 15px solid #0fb4ff;
+  border-left: 15px solid var(--accent);
   filter: blur(8px);
 }
 
 .bubble span:nth-child(2) {
   inset: 15px;
-  border-right: 15px solid #ff4484;
+  border-right: 15px solid var(--accent-2);
   filter: blur(8px);
 }
 
 .bubble span:nth-child(4) {
   inset: 30px;
-  border-left: 15px solid #ff4484;
+  border-left: 15px solid var(--accent-2);
   filter: blur(12px);
 }
 
@@ -164,82 +357,21 @@
   transform: rotate(330deg);
 }
 
-/* Resume Button Styling */
-.resume-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.resume-button {
-  background-color:rgb(89, 100, 111);
-  color: white;
-  padding: 15px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: 2px solidrgb(142, 172, 192);
-  width: fit-content;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.resume-button:hover {
-  background-color:rgb(138, 141, 142);
-  transform: translateY(-3px);
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-.resume-button:active {
-  transform: translateY(0px);
-  box-shadow: none;
-}
-
-/* Profile page enhancements */
-.profile-container {
-  text-align: center;
-}
-
-.profile-details {
-  list-style: none;
-  padding: 0;
-}
-
-.profile-details li {
-  margin: 10px 0;
-  font-size: 16px;
-}
-.resume-container a {
-  text-decoration: none;
-  color: inherit;
-}
-
 @media (max-width: 500px) {
   .profile-container {
-      height: 250px;
-      overflow: hidden;
+    padding: 1.75rem 1.25rem 1.5rem;
   }
   .profile-container h2 {
-      font-size: 10px;
-  }
-  .typewriter {
-      font-size: 8px;
-  }
-  .resume-container{
-    margin-top: 10px;
+    font-size: 1.3rem;
   }
   .resume-button {
-    padding: 8px 12px;  /* Smaller padding */
-    font-size: 12px;    /* Smaller text */
-    border-radius: 5px; /* Adjust border radius */
-    width: auto;        /* Let it shrink naturally */
+    padding: 0.75rem 1.2rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 374px) {
-  .bubble{
+  .bubble {
     opacity: 20%;
   }
 }

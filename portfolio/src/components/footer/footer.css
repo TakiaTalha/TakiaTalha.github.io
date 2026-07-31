@@ -1,31 +1,29 @@
 /* General footer styling */
 .footer-c{
-    background-color: #778088; /* Dark background */
-    color: #fff; /* White text */
-    padding: 1px 0; /* Space around the footer */
-    text-align: center; /* Center-align text and content */ 
+    background-color: var(--surface);
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+    padding: 1.25rem 0;
+    text-align: center;
   }
   /* Footer container */
   .footer-container {
-    max-width: 1200px; /* Keep content width limited */
-    margin: 0 auto; /* Center content */
+    max-width: 1200px;
+    margin: 0 auto;
   }
-  
+
   /* Footer text */
   .footer-text {
-    font-size: 1rem;
-    margin-bottom: 1rem; /* Space below the text */
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    margin: 0;
   }
 
-  .dark-mode .footer-c{
-    background-color: black; /* Darker background in dark mode */
-  }
-
- 
   /* Responsive footer for smaller screens */
   @media (max-width: 768px) {
     .footer-text {
-      font-size: 0.875rem; /* Reduce font size */
+      font-size: 0.8rem;
     }
   }
-  

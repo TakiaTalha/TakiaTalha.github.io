@@ -4,6 +4,19 @@ import Link from '../link/link.js';
 function Profile() {
   return (
     <div className="profile-container">
+      <div className="profile-avatar">
+        <img
+          src="/profile.jpg"
+          alt="Kazi Takia Talha"
+          className="profile-avatar-img"
+          onError={(e) => {
+            e.currentTarget.style.display = 'none';
+            e.currentTarget.parentElement.classList.add('no-photo');
+          }}
+        />
+        <span className="profile-avatar-initials">KT</span>
+        <span className="profile-avatar-status" title="Open to opportunities"></span>
+      </div>
       <h2>Kazi Takia Talha</h2>
       <div className='typewriter'>
       <p>CS Student, Teaching Assistant, ML Developer</p>
@@ -12,7 +25,7 @@ function Profile() {
         <Link
           imageSrc="./location.png"
           altText="Location"
-          text="Mississauga, Toronto"
+          text="Toronto, Ontario, Canada"
         />
         <Link
           imageSrc="./graduation.png"
@@ -45,36 +58,36 @@ function Profile() {
           </div>
         </a>
       </div>
-      <div class="container">
-    <div class="bubble">
+      <div className="container">
+    <div className="bubble">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
     </div>
-    <div class="bubble">
+    <div className="bubble">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
     </div>
-    <div class="bubble">
+    <div className="bubble">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
     </div>
-    <div class="bubble">
+    <div className="bubble">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
     </div>
-    <div class="bubble">
+    <div className="bubble">
         <span></span>
         <span></span>
         <span></span>
