@@ -1,4 +1,4 @@
-import react from "react";
+// import react from "react";
 import './link.css'
 
 function Link({ imageSrc, altText, text, link }){
