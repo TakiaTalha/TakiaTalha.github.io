@@ -7,19 +7,43 @@ function Experience() {
       <h2 className="section-title">EXPERIENCE</h2>
       <div className="experience-item">
         <div className="experience-header">
-          <h3>Software Analyst Intern, Hitachi Rail</h3>
-          <p className="date">May 2024 - Present</p>
+          <div className="experience-title">
+            <h2>Software Analyst Intern</h2>
+            <h3>Hitachi Rail</h3>
+          </div>
+          <p className="date">May 2025 - Aug 2026</p>
         </div>
         <ul>
-        <li>Contributing to the optimization of the Automatic Train Supervision (ATS) system to improve railway travel time and operational efficiency</li>
+        <li>Developed ETL and data processing pipelines for 2M+ ATS operational records, performing data cleaning, exploratory analysis, and
+            feature engineering using SQL and statistical techniques (PCA, KneeLocator).</li>
         <li>Performed data cleaning, analysis, and feature engineering on large-scale operational datasets extracted from XML files and internal databases</li>
         <li>Developed a baseline machine learning model to analyze and predict travel time</li>
-        <li>Currently implementing a graph-based representation of train network data using <strong>Structural Deep Network Embedding (SDNE)</strong> for enhanced system modeling</li>
+        <li>Prototyped an AI-assisted data analysis workflow using MCP servers and LLMs, enabling users to interact with machine learning pipelines
+          through natural language and automatically execute data processing and modeling tasks.</li>
+        <li>Supported the Train Autonomy Platform, a sensor-based localization platform, by analyzing sensor data to validate radar ghost-target
+            simulations, investigate detection-loss behavior, and prototype IMU slow-drift detection algorithms.</li>
         </ul>
       </div>
       <div className="experience-item">
         <div className="experience-header">
-          <h3>Software Developer Intern, The Hospital for Sick Children</h3>
+          <div className="experience-title">
+            <h2>Undergraduate Research Volunteer</h2>
+            <h3>University of Toronto RLEA Lab</h3>
+          </div>
+          <p className="date">Nov 2025 - Present</p>
+        </div>
+        <ul>
+          <li>Evaluated instance segmentation models (Cellpose, SAM-based models) and analyzed segmentation quality to separate single-cell phytoliths from multi-cell microscopy images.</li>
+          <li>Explored active learning pipelines to reduce labeling effort and improve segmentation performance on limited biological datasets.</li>
+          <li>Investigated CNN- and Vision Transformer-based models for single-cell classification tasks.</li>
+        </ul>
+      </div>
+      <div className="experience-item">
+        <div className="experience-header">
+          <div className="experience-title">
+            <h2>Software Developer Intern</h2>
+            <h3>The Hospital for Sick Children</h3>
+          </div>
           <p className="date">Jan 2025 - Apr 2024</p>
         </div>
         <ul>
@@ -29,7 +53,10 @@ function Experience() {
       </div>
       <div className="experience-item">
         <div className="experience-header">
-          <h3>ML Developer, The Linux Foundation</h3>
+          <div className="experience-title">
+            <h2>ML Developer</h2>
+            <h3>The Linux Foundation</h3>
+          </div>
           <p className="date">Jan 2024 - Apr 2024</p>
         </div>
         <ul>
@@ -40,7 +67,10 @@ function Experience() {
       </div>
       <div className="experience-item">
         <div className="experience-header">
-          <h3>Teaching Assistant, University of Toronto</h3>
+          <div className="experience-title">
+            <h2>Teaching Assistant</h2>
+            <h3>University of Toronto</h3>
+          </div>
           <p className="date">Sep 2024 - Present</p>
         </div>
         <ul>
@@ -51,24 +81,16 @@ function Experience() {
       </div>
       <div className="experience-item">
         <div className="experience-header">
-          <h3>ML Developer, U of T Machine Intelligence Student Team</h3>
+          <div className="experience-title">
+            <h2>ML Developer</h2>
+            <h3>U of T Machine Intelligence Student Team</h3>
+          </div>
           <p className="date">Sep 2023 - Aug 2024</p>
         </div>
         <ul>
           <li>Implemented One-vs-Rest and Binary Relevance SVM and ensembled them with Naive Bayes to solve a Hierarchical Multi-Label Classification problem</li>
           <li>Collected and preprocessed raw data to feed into the models by performing tasks such as cleaning, normalizing, and feature engineering</li>
           <li>Collaborated using GIT & Notion, learning effective design & communication skills for large-scale ML development projects</li>
-        </ul>
-      </div>
-
-      <div className="experience-item">
-        <div className="experience-header">
-          <h3>Website Manager, UTM MSA</h3>
-          <p className="date">Sep 2023 - Apr 2024</p>
-        </div>
-        <ul>
-          <li>Managed the website of the MSA using HTML, CSS, and JavaScript</li>
-          <li>Collaborated with the executive team to ensure the website was up to date with the latest events and information</li>
         </ul>
       </div>
     </div>

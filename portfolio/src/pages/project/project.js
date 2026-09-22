@@ -53,7 +53,7 @@ const Projects = () => {
 
   return (
     <div className="projects-container">
-      <h1 className="projects-title">CURRENT WORKS</h1>
+      <h1 className="projects-title">PROJECTS</h1>
       <div className="projects-grid">
         {currentWorks.map((project, index) => (
           <Card
@@ -65,7 +65,6 @@ const Projects = () => {
           />
         ))}
       </div>
-      <h1 className="projects-title">PAST PROJECTS</h1>
       <div className="projects-grid">
         {pastProjects.map((project, index) => (
           <Card

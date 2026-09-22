@@ -56,7 +56,9 @@ function Home() {
     const aboutSpan = document.querySelector("#about-span");
     const pencil = aboutSpan.nextElementSibling; // Select the pencil icon
     const words = [
-      "Hi! I'm Takia, a third-year computer science student at the University of Toronto with a strong passion for Machine Learning and Deep Learning, particularly in Natural Language Processing (NLP) tasks. I am currently working as a teaching assistant at UofT. Over time, I have completed several ML projects and am continuously striving to expand my knowledge and expertise in the field. Currently, I am collaborating with The Linux Foundation to develop a personal AI tutor. Additionally, I am also working with The Hospital for Sick Children to enhance their website with new features to improve usability and data accessibility. I am eager to explore new challenges and opportunities to further my growth in AI and software development"
+      "Hi! I'm Takia, a Computer Science and Mathematics student at the University of Toronto with a strong interest in machine learning, algorithms, and data-driven systems. My experience spans machine learning, optimization, sensor algorithms, computer vision, and large-scale data analysis. During my co-op at Hitachi Rail, I worked with large operational datasets, developed machine learning and optimization models, and explored AI-assisted data analysis using LLMs. I also worked with radar and IMU sensor data for autonomous systems, investigating detection behavior and prototyping sensor algorithms. Alongside industry experience, I’m involved in research exploring deep learning for computer vision, including image segmentation and classification. I enjoy working on challenging problems where data and algorithms come together, and I’m always looking for opportunities to learn, build, and apply these ideas to real-world problems."
+    
+
     ];
 
     new TypeWriter(aboutSpan, words, 2500, pencil);
